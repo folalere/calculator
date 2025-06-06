@@ -8,14 +8,6 @@ function clearDisplay() {
   display.value = '';
 }
 
-function calculate() {
-  try {
-    display.value = eval(display.value);
-  } catch {
-    display.value = 'Error';
-  }
-}
-
 
   // keyboard input support
 document.addEventListener('keydown', function (e) {
