@@ -42,7 +42,7 @@ function toggleTheme() {
 
     function calculate() {
       try {
-        const result = eval(display.value);
+        const result =  Function(`"use strict"; return (${display.value})`)();
         historyList.innerHTML += `<li>${display.value} = ${result}</li>`;
         display.value = result;
       } catch {
